@@ -2,6 +2,7 @@
 
 directories=(
   /home/inauris/settings/dotfiles/
+  /home/inauris/settings/dotfiles/
   /home/inauris/settings/dot-diff/
   /home/inauris/projects/base-of-ideas/
   /home/inauris/projects/base-of-knowledges/
@@ -11,10 +12,14 @@ directories=(
   /home/inauris/pictures/wallpapers/
   /home/inauris/settings/dotfiles/.public_projects/rwpm
   /home/inauris/settings/dotfiles/.public_projects/tmux-workspace-manager
-  /home/inauris/settings/dotfiles/.public_projects/currency-rates-polybar
 )
-for directory in ${directories[@]}
+for directory in "${directories[@]}"
 do
-  cd $directory
-  git pull
+  cd "$directory" || break
+  changes=$(git pull)
+  if [[ $changes != "Already up to date." ]]; then
+    commit_names=$(git log --pretty=format:"%s" HEAD@"{1}".. | sed 's/^/- /')
+    message=$(printf "%s\nCommits:\n%s" "$(basename "$directory")" "$commit_names")
+    notify-send "AGP: $message"
+  fi
 done
