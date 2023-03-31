@@ -44,5 +44,5 @@
 
 The `install` script overwrites the current files!
 
-Get introduced with [the instructions](https://exynil.github.io/knowledge-base/linux/how-to/manage-dotfiles.html)
+Get introduced with [the instructions](https://exynil.github.io/knowledge-base/Linux/How-to/Manage-dotfiles.html)
 for managing the system configuration
