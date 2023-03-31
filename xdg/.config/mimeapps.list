@@ -1,0 +1,17 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-Telegram Desktop-MH9KU1.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-48HWU1.desktop
+message/rfc822=userapp-Thunderbird-48HWU1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-48HWU1.desktop
+x-scheme-handler/webcal=userapp-Thunderbird-EYERU1.desktop
+text/calendar=userapp-Thunderbird-EYERU1.desktop
+application/x-extension-ics=userapp-Thunderbird-EYERU1.desktop
+x-scheme-handler/webcals=userapp-Thunderbird-EYERU1.desktop
+application/pdf=org.pwmt.zathura.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-MH9KU1.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-48HWU1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-48HWU1.desktop;
+x-scheme-handler/webcal=userapp-Thunderbird-EYERU1.desktop;
+x-scheme-handler/webcals=userapp-Thunderbird-EYERU1.desktop;

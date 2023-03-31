@@ -1,3 +1,7 @@
 [user]
-	name = Maxim Kim
-	email = exynil@gmail.com
+	email = peskovdev@proton.me
+	name = Peskov Sergey
+[core]
+	excludesFile = /home/inauris/.gitignore
+[init]
+	defaultBranch = master

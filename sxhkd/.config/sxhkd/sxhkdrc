@@ -1,7 +1,7 @@
 #--------------------- wm independent hotkeys ---------------------#
 
 # terminal emulator
-super + Return
+{ctrl + alt + t, super + Return}
     $TERMINAL
 
 # make sxhkd reload its configuration files:
@@ -9,35 +9,27 @@ super + Escape
     pkill -USR1 -x sxhkd
 
 #--------------------- bspwm hotkeys ---------------------#
-
+# ??
 # quit/restart bspwm
 super + alt + {q,r}
     bspc {quit,wm -r}
 
-# close and kill
-super + {_,shift + }q
-    bspc node -{c,k}
-
-# alternate between the tiled and monocle layout
-super + m
-    bspc desktop -l next
-
-# send the newest marked node to the newest preselected node
-super + y
-    bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest window
-super + g
-    bspc node -s biggest.window
+# close
+{ctrl + F4, super + q}
+    bspc node -c
 
 #--------------------- state/flags ---------------------#
 
 # set the window state
-super + {t,shift + t,s,f}
+alt + {t,super + t,s,f}
     bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+# alternate between the tiled and monocle layout
+ctrl + m
+    bspc desktop -l next
+
 # set the node flags
-super + ctrl + {m,x,y,z}
+alt + ctrl + {m,x,y,z}
     bspc node -g {marked,locked,sticky,private}
 
 #--------------------- focus/swap ---------------------#
@@ -45,85 +37,84 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
-
 super + {_,shift + }{Left,Down,Up,Right}
     bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
-    bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous desktop
-super + {_,shift +} Tab
-    bspc desktop -f {next,prev}.local
+# super + {p,b,comma,period}
+#     bspc node -f @{parent,brother,first,second}
+super + {p,comma,period}
+    bspc node -f @{parent,first,second}
 
 # focus the next/previous window in the current desktop
-alt + {_,shift +} Tab
+alt + {_,shift + } Tab
     bspc node -f {next,prev}.local.!hidden.window
 
-# focus the next/previous monitor
-super + bracket{left,right}
-    bspc monitor -f {prev,next}
-
-# focus the older or newer node in the focus history
-super + {o,i}
-    bspc wm -h off; \
-    bspc node {older,newer} -f; \
-    bspc wm -h on
-
 # focus or send to the given desktop
-super + {_,shift + } {1-9,0}
-    bspc {desktop -f,node -d} '{1-9,10}'
+super + 1 ; {_,super + } {1-9,0}
+    bspc {desktop -f,node -d} '1{1-9,0}'
+super + 0 ; {_,super + } {1-9,0}
+    bspc {desktop -f,node -d} '2{1-9,0}'
 
+ctrl + 1 ; {_,ctrl + } {1-9,0}
+    bspc {desktop -f,node -d} '1{1-9,0}'
+ctrl + 0 ; {_,ctrl + } {1-9,0}
+    bspc {desktop -f,node -d} '2{1-9,0}'
+    
+# rotate
+alt + r
+    bspc node @parent -R 90
 
 #--------------------- Preselect ---------------------#
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
-    bspc node -p {west,south,north,east}
+super + shift + {h,j,k,l}
+    bspc nide -p {west,south,north,east}
 
-super + ctrl + {Left,Down,Up,Right}
+super + shift + {Left,Down,Up,Right}
     bspc node -p {west,south,north,east}
-
-# preselect the ratio
-#super + ctrl + {1-9}
-#   bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + space
+super + shift + space
     bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
 
 #--------------------- move/resize ---------------------#
 
 # expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
+super + ctrl + {h,j,k,l}
     bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-super + alt + {Left,Down,Up,Right}
+super + ctrl + {Left,Down,Up,Right}
     bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
+super + shift + ctrl + {h,j,k,l}
     bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-super + alt + shift + {Left,Down,Up,Right}
+super + shift + ctrl + {Left,Down,Up,Right}
     bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + {Left,Down,Up,Right}
+super + shift + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
-
 
 #--------------------- Rofi ---------------------#
 
-# run
-alt + {d,w,x,m,c,s,q,o,a,r,e}
-    $XDG_CONFIG_HOME/rofi/scripts/{run,window,powermenu,display,clipboard,browser,calculator,conference,colorscheme,record,wallpaper}
+ctrl + {F2}
+    $XDG_CONFIG_HOME/rofi/scripts/run
+
+super + {_,shift +} Tab
+    $XDG_CONFIG_HOME/rofi/scripts/window
+
+super + {d,w,x,m}
+    $XDG_CONFIG_HOME/rofi/scripts/{run,wifi-menu,powermenu,display}
+
+super + {c,o,f}
+    $XDG_CONFIG_HOME/rofi/scripts/{clipboard,calculator,conference}
+
+super + {v,r,e,a}
+    $XDG_CONFIG_HOME/rofi/scripts/{colorscheme,record,rwpm -s '/home/inauris/pictures',tmuxwm}
+
+super + {z,b}
+    $XDG_CONFIG_HOME/rofi/scripts/{menu,mdbooks}
 
 #--------------------- Screenshot ---------------------#
 
@@ -132,53 +123,40 @@ Print
     flameshot gui
 
 # fullscreen
-super + Print
+shift + Print
     flameshot full -c
-
-#--------------------- watching youtube video with MPV ---------------------#
-
-alt + y
-    sleep 0.5 && xdotool key "ctrl+l" && xdotool key "ctrl+c" && mpv $(xclip -o)
-
-#--------------------- Backlight ---------------------#
-
-XF86MonBrightness{Up,Down}
-    xbacklight {-inc 10,-dec 10}
 
 #--------------------- Audio ---------------------#
 
-XF86Audio{Play,Stop,Prev,Next,RaiseVolume,LowerVolume,Mute}
+XF86Audio{Play,Stop,Prev,Next}
     playerctl {play-pause,stop,previous,next}
 
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-    pamixer {-i 2,-d 2,-t}
+    pamixer {-i 5,-d 5,-t}
 
 #--------------------- user setup ---------------------#
 
-# window gap 0, 5, 10, 20
-super + c : {y,u,i,o}
-    bspc config window_gap {0,5,10,20}
-
-# Mode for dynamic gaps
-super + c : bracket{left,right}
-    bspc config window_gap "$(($(bspc config -d focused window_gap) {-,+} 5 ))"
-
 # Hide polybar
-alt + p
+ctrl + alt + i
     polybar-toggle
 
-# Termbin
-alt + t
-    termbin
+# dunst history
+ctrl + grave
+    dunstctl history-pop
 
-# Translate selection
-alt + g
-    translate-sel
+# Scratchpads
+super + s ; {k,c,p,t,b,f,m,l}
+    tdrop -am {\
+    -h 60% -w 52% -y 25 -x 24% kalendar, \
+    -h 60% -w 52% -y 25 -x 24% thunderbird -calendar, \
+    -h 60% -w 50% -y 25 -x 49% pavucontrol, \
+    -h 60% -w 50% -y 25 -x 25% alacritty, \
+    -n 1 -h 80% -w 70% -y 25 -x 15% alacritty -e btop, \
+    -n 2 -h 80% -w 80% -y 25 -x 10% alacritty -e ranger, \
+    -n 3 -h 60% -w 50% -y 25 -x 49% alacritty -e ranger ~/music, \
+    -h 10% -w 14% -y 90% -x 86% l3afpad\
+    }
 
-# Terminal apps
-alt + {l}
-    $TERMINAL -e {lf}
-
-# htop
-ctrl + alt + Delete
-    $TERMINAL -e htop -H
+# ranger
+ctrl + F1
+    $TERMINAL -e ranger

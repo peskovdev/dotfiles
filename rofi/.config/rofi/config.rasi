@@ -1,0 +1,60 @@
+/*******************************************************************************
+ * ROFI Color Theme
+ * User: Sheepla
+ * Copyleft: Sheepla
+ *******************************************************************************/
+
+* {
+    highlight: bold italic underline;
+    scrollbar: true;
+
+    /* Color palette from iceberg.vim and iceberg.vim
+     *    https://github.com/cocopon/iceberg.vim
+     */
+    palette-bg0:     #e8e9ec;
+    palette-bg1:     #d4d9e1;
+    palette-bg2:     #757ca3;
+    palette-fg0:     #c6c8d1;
+    palette-fg1:     #757ca3;
+    palette-red:     #e27878;
+    palette-green:   #b4be82;
+    palette-yellow:  #e2a478;
+    palette-blue:    #84a0c6;
+    palette-purple:  #a093c7;
+    palette-cyan:    #89b8c2;
+    palette-grey:    #d2d4de;
+
+    /* Base colors */
+    background:                  @palette-bg0;
+    background-color:            @background;
+    foreground:                  @palette-fg1;
+
+    /* Normal colors */
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @palette-bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @palette-bg2;
+    selected-normal-foreground:  @palette-fg0;
+
+    /* Active window colors */
+    active-background:           @normal-background;
+    active-foreground:           @palette-blue;
+    alternate-active-background: @alternate-normal-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @palette-blue;
+    selected-active-foreground:  @normal-background;
+
+    /* Urgent colors */
+    urgent-background:           @background;
+    urgent-foreground:           @palette-yellow;
+    alternate-urgent-background: @alternate-normal-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @urgent-foreground;
+    selected-urgent-foreground:  @normal-background;
+
+    /* Other colors */
+    border-color:                @palette-bg2;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @palette-bg2;
+}

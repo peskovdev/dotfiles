@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Пример команды",
+    "commands": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://inauris.gitlab.io/base-of-knowledges/"
+      }
+    ]
+  }
+]

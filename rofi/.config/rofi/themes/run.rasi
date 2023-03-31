@@ -18,7 +18,6 @@ inputbar {
 }
 prompt {
     padding:                8px 8px 4px 8px;
-
     background-color:       @selected;
     text-color:             @background;
 }
@@ -48,6 +47,10 @@ message {
 }
 listview {
     spacing:                2px;
+}
+element-text selected {
+    background-color:       @selected;
+    text-color:             @background;
 }
 element {
     padding:                8px 8px 4px 8px;

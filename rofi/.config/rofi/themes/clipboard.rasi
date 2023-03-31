@@ -4,8 +4,10 @@
     font:                   "Ubuntu Mono 14";
     background-color:       @background;
     text-color:             @foreground;
+    highlight:              #f43f5e;
 }
 window {
+    width:                  848px;
     border-color:           @background-light;
     border:                 1;
 }
@@ -47,6 +49,10 @@ message {
 }
 listview {
     spacing:                2px;
+}
+element-text selected {
+    background-color:       @selected;
+    text-color:             @background;
 }
 element {
     padding:                8px 8px 4px 8px;

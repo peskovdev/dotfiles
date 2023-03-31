@@ -6,7 +6,7 @@
     text-color:             @foreground;
 }
 window {
-    width:                  44%;
+    width:                  838px;
     border-color:           @background-light;
     border:                 1;
 }
@@ -19,9 +19,11 @@ inputbar {
 }
 prompt {
     padding:                10px 30px 10px 8px;
-    background-color:       @background-light;
+    background-color:       @background;
     text-color:             @selected;
-    border-radius:          0px 12px 12px 0px;
+    border-radius:          0px 5px 5px 0px;
+    border-color:           @selected;
+    border:                 1;
 }
 textbox-prompt-colon {
     expand: false;
@@ -29,7 +31,7 @@ textbox-prompt-colon {
     background-color:       @selected;
     text-color:             @background;
     str:                    "system";
-    border-radius:          12px 0px 0px 12px;
+    border-radius:          5px 0px 0px 5px;
 }
 listview {
     layout:                 horizontal;
@@ -38,14 +40,18 @@ listview {
 }
 element-text {
     font:                   "Material Design Icons 44";
+    background-color:       @background-light;
+}
+element-text selected {
+    font:                   "Material Design Icons 44";
+    background-color:       @selected;
+    text-color:             @background;
 }
 element {
-    padding:                40px 40px 80px 40px;
-    border-color:           @background-light;
+    padding:                40px 40px 40px 40px;
     background-color:       @background-light;
-    border-radius:          25px;
+    border-radius:          10px;
 }
 element selected {
     background-color:       @selected;
-    text-color:             @background;
 }

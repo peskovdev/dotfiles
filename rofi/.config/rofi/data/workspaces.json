@@ -1,0 +1,480 @@
+[
+  {
+    "session_name": "codequest",
+    "directory": "/home/inauris/projects/codequest",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      },
+      {
+        "window_name": "run",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "codequest-auth-ms",
+    "directory": "/home/inauris/projects/codequest/auth-ms",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "python main.py"]
+      }
+    ]
+  },
+  {
+    "session_name": "yandex",
+    "directory": "/home/inauris/projects/yandex",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "run",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "go-learning",
+    "directory": "/home/inauris/projects/go-learning",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      },
+      {
+        "window_name": "run",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "flask-blog",
+    "directory": "/home/inauris/projects/flask-blog/backend",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "python main.py"]
+      }
+    ]
+  },
+  {
+    "session_name": "broken-http",
+    "directory": "/home/inauris/projects/broken-http",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v"]
+      }
+    ]
+  },
+  {
+    "session_name": "resume",
+    "directory": "/home/inauris/projects/peskovdev.github.io",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "sqlalchemy_test",
+    "directory": "/home/inauris/projects/sqlalchemy_testing",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v"]
+      }
+    ]
+  },
+  {
+    "session_name": "pheidippides",
+    "directory": "/home/inauris/projects/pheidippides",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "python server.py"]
+      }
+    ]
+  },
+  {
+    "session_name": "react-hotel",
+    "directory": "/home/inauris/projects/react-hotel",
+    "windows": [
+      {
+        "window_name": "client_nvim",
+        "commands": ["cd client", "rr"]
+      },
+      {
+        "window_name": "server_nvim",
+        "commands": ["cd server", "rr"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["cd client", "npm start"]
+      }
+    ]
+  },
+  {
+    "session_name": "aiogram_bots",
+    "directory": "/home/inauris/projects/aiogram_bots",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v"]
+      }
+    ]
+  },
+  {
+    "session_name": "workflow_drf",
+    "directory": "/home/inauris/projects/workflow/workflow_drf",
+    "windows": [
+      {
+        "window_name": "vi_main",
+        "commands": ["v", "cd workflow_drf", "vi"]
+      },
+      {
+        "window_name": "vi_root",
+        "commands": ["v", "vi"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "make run"]
+      }
+    ]
+  },
+  {
+    "session_name": "workflow-vue",
+    "directory": "/home/inauris/projects/workflow/workflow-vue",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["cd src", "vi App.vue"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      },
+      {
+        "window_name": "run",
+        "commands": ["npm run serve"]
+      }
+    ]
+  },
+  {
+    "session_name": "workflow-doc",
+    "directory": "/home/inauris/projects/workflow/workflow-doc",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["cd src", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "dotfiles",
+    "directory": "/home/inauris/settings/dotfiles",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["git status"]
+      }
+    ]
+  },
+  {
+    "session_name": "pyTelegramBotAPI_bots",
+    "directory": "/home/inauris/projects/pyTelegramBotAPI_bots",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v"]
+      }
+    ]
+  },
+  {
+    "session_name": "nvim",
+    "directory": "/home/inauris/settings/dotfiles/nvim/.config/nvim",
+    "windows": [
+      {
+        "window_name": "p-file",
+        "commands": ["cd /home/inauris/projects/", "rr"]
+      },
+      {
+        "window_name": "nvim",
+        "commands": ["cd lua", "rr"]
+      },
+      {
+        "window_name": "git",
+        "commands": ["tmux select-window -t 2", "clear", "git status"]
+      }
+    ]
+  },
+  {
+    "session_name": "rofi",
+    "directory": "/home/inauris/settings/dotfiles/rofi/.config/rofi/scripts",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["cd lua", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "dot-diff",
+    "directory": "/home/inauris/settings/dot-diff",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["git status"]
+      }
+    ]
+  },
+  {
+    "session_name": "base-of-knowledges",
+    "directory": "/home/inauris/projects/base-of-knowledges",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["cd src", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "python-kb",
+    "directory": "/home/inauris/projects/base-of-knowledges",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["cd src/python", "rr"]
+      },
+      {
+        "window_name": "pyshell",
+        "commands": ["python3.11"]
+      },
+      {
+        "window_name": "nvim",
+        "commands": ["cd /home/inauris/projects/a_fluent_python/doc", "nvim test.py"]
+      }
+    ]
+  },
+  {
+    "session_name": "base-of-ideas",
+    "directory": "/home/inauris/projects/base-of-ideas",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["cd src", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "roadmap",
+    "directory": "/home/inauris/projects/roadmap",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["cd src", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "django-movie",
+    "directory": "/home/inauris/projects/movie/django-movie",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "vi"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "make run"]
+      }
+    ]
+  },
+  {
+    "session_name": "typed-py",
+    "directory": "/home/inauris/projects/typed-py",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["vi"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "euler-py",
+    "directory": "/home/inauris/projects/euler-py",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["vi"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "async",
+    "directory": "/home/inauris/projects/async",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "vi"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "tmux splitw -v -t 3", "tmux splitw -h -t 3"]
+      }
+    ]
+  },
+  {
+    "session_name": "trivia-test",
+    "directory": "/home/inauris/projects/trivia-test",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      }
+    ]
+  },
+  {
+    "session_name": "projects",
+    "directory": "/home/inauris/projects",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  }
+]

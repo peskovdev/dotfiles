@@ -5,8 +5,14 @@
 # These configuration files will be loaded in order, replacing values in files
 # loaded earlier with those loaded later in the chain. The file itself will
 # always be loaded last.
-#import:
-#  - /path/to/alacritty.yml
+# NOTE: If you change dark to light - don't forget change theme in nvim & tmux
+import:
+  # - ~/.config/alacritty/themes/one_dark.yaml
+  # - ~/.config/alacritty/themes/zenburm.yaml
+  # - ~/.config/alacritty/themes/tender.yaml
+  # - ~/.config/alacritty/themes/wombat.yaml
+  # - ~/.config/alacritty/themes/papercolor_light.yaml
+  - ~/.config/alacritty/themes/github_light_default.yaml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -21,13 +27,14 @@ env:
   #TERM: alacritty
   WINIT_X11_SCALE_FACTOR: "1"
 
-#window:
+window:
+  opacity: 0.75
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  #dimensions:
+  # dimensions:
   #  columns: 0
   #  lines: 0
 
@@ -35,7 +42,7 @@ env:
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
+  # position:
   #  x: 0
   #  y: 0
 
@@ -43,9 +50,9 @@ env:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+   x: 7
+   y: 7
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -109,10 +116,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: JetBrains Mono
+    family: Ubuntu Mono
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   bold:
@@ -120,10 +127,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: Ubuntu Mono
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: bold
 
   # Italic font face
   italic:
@@ -131,10 +138,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: Ubuntu Mono
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Bold italic font face
   bold_italic:
@@ -142,10 +149,10 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: Ubuntu Mono
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold Italic
+    style: Bold Italic
 
   # Point size
   size: 12.0
@@ -173,114 +180,6 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night)
-colors:
-  # Default colors
-  primary:
-    background: '#2e3440'
-    foreground: '#d8dee9'
-
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not
-    # present. If the bright foreground color is not set, or
-    # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
-    # color will be used.
-    dim_foreground: '#a5abb6'
-    # bright_foreground: '#eaeaea'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  cursor:
-    text: '#2e3440'
-    cursor: '#d8dee9'
-
-  # Vi mode cursor colors
-  #
-  # Colors for the cursor when the vi mode is active.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  vi_mode_cursor:
-    text: '#2e3440'
-    cursor: '#d8dee9'
-
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area.
-  #
-  # Allowed values are CellForeground and CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  selection:
-    text: CellForeground
-    background: '#4c566a'
-
-  # Search colors
-  #
-  # Colors used for the search bar and match highlighting.
-  search:
-    # Allowed values are CellForeground and CellBackground, which reference the
-    # affected cell, or hexadecimal colors like #ff00ff.
-    matches:
-      foreground: CellBackground
-      background: '#88c0d0'
-    #focused_match:
-    #  foreground: CellBackground
-    #  background: CellForeground
-
-    bar:
-      background: '#434c5e'
-      foreground: '#d8dee9'
-
-  # Normal colors
-  normal:
-    black: '#3b4252'
-    red: '#bf616a'
-    green: '#a3be8c'
-    yellow: '#ebcb8b'
-    blue: '#81a1c1'
-    magenta: '#b48ead'
-    cyan: '#88c0d0'
-    white: '#e5e9f0'
-
-  # Bright colors
-  bright:
-    black: '#4c566a'
-    red: '#bf616a'
-    green: '#a3be8c'
-    yellow: '#ebcb8b'
-    blue: '#81a1c1'
-    magenta: '#b48ead'
-    cyan: '#8fbcbb'
-    white: '#eceff4'
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  dim:
-    black: '#373e4d'
-    red: '#94545d'
-    green: '#809575'
-    yellow: '#b29e75'
-    blue: '#68809a'
-    magenta: '#8c738c'
-    cyan: '#6d96a5'
-    white: '#aeb3bb'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '#ff00ff' }`
-  #
-  #indexed_colors: []
 
 # Bell
 #
@@ -327,8 +226,8 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
-
+# window.opacity: 0.87
+# background_opacity: 0.87
 #selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.

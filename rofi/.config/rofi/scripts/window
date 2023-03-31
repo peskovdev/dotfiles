@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rofi_command='rofi -theme themes/window.rasi'
+rofi_command='rofi -m -1 -theme themes/window.rasi'
 
 $rofi_command -show window -modi window

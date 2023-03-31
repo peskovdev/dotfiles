@@ -1,0 +1,57 @@
+#!/bin/bash
+
+wid=$1
+class=$2
+instance=$3
+consequences=$4
+
+# notify-send "wid: $wid"
+# notify-send "class: $class"
+# notify-send "instance: $instance"
+# notify-send "consequences: $consequences"
+
+case "$class" in
+firefox)
+    if [ "$instance" = "Toolkit" ]; then
+        echo "state=floating"
+    fi
+    ;;
+Anki)
+    echo "state=floating"
+    WM_NAME="$(xprop -id "$wid" WM_NAME)"
+    if [[ "$WM_NAME" =~ "User 1 - Anki" ]]; then
+        echo "state=pseudo_tiled"
+    fi
+    ;;
+thunderbird)
+    echo "state=floating"
+    ;;
+
+qBittorrent)
+    echo "state=floating rectangle=1918x1055+0+25"
+    ;;
+Gcolor3)
+    echo "state=floating"
+    ;;
+kdeconnect.app)
+    echo "state=pseudo_tiled"
+    ;;
+electrum)
+    echo "state=pseudo_tiled"
+    ;;
+Alacritty)
+    xkb-switch -s us
+    ;;
+Zathura)
+    echo "state=tiled"
+    ;;
+flameshot)
+    echo "state=floating"
+    ;;
+TelegramDesktop)
+    echo "desktop=27"
+    ;;
+superProductivity)
+    echo "desktop=20"
+    ;;
+esac

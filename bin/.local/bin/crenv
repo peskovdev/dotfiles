@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if poetry init --no-interaction
+then
+  poetry env use python
+  source $(poetry env info --path)/bin/activate &&
+  poetry add --group dev pynvim isort black
+else
+  poetry env use python
+  source $(poetry env info --path)/bin/activate &&
+  poetry install
+fi

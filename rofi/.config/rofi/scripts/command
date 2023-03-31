@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Что делает этот скрипт:
+# - Позволяет быстро запускать часто используемые команды
+
+# data - переменная хранит названия программ и папки для открытия
+
+# стуркура command.json
+
+# [
+#   {
+#     "name": "Приватное окно firefox",
+#     "commands": [
+#       {
+#         "app": "firefox",
+#         "arguments": "--private-window http://localhost"
+#       },
+#     ]
+#   }
+# ]
+
+rofi_command='rofi -m -1 -theme themes/command.rasi'
+
+data="/home/inauris/.config/rofi/data/commands.json"
+
+# Variable passed to rofi
+options="$(jq -r '.[].name' "$data")"
+
+chosen="$(echo -e "$options" | $rofi_command -p "commands" -dmenu)"
+
+[[ -z "$chosen" ]] && exit 1
+
+commands=$(jq -r ".[] | select(.name==\"$chosen\") .commands" "$data")
+
+for row in $(echo "${commands}" | jq -r '.[] | @base64'); do
+    command=$(echo "${row}" | base64 --decode | jq -r ".app")
+    command+=" "
+    command+=$(echo "${row}" | base64 --decode | jq -r ".arguments")
+
+    $command
+done

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "base-of-knowledges",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://peskovdev.gitlab.io/base-of-knowledges/"
+      }
+    ]
+  },
+  {
+    "name": "kb: Python (py)",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://peskovdev.gitlab.io/base-of-knowledges/python/index.html"
+      }
+    ]
+  },
+  {
+    "name": "kb: JavaScript (js)",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://peskovdev.gitlab.io/base-of-knowledges/js/index.html"
+      }
+    ]
+  },
+  {
+    "name": "kb: Golang (go)",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://peskovdev.gitlab.io/base-of-knowledges/go/index.html"
+      }
+    ]
+  },
+  {
+    "name": "kb: Databases (db)",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://peskovdev.gitlab.io/base-of-knowledges/databases/index.html"
+      }
+    ]
+  },
+  {
+    "name": "kb: Flask (flask)",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://peskovdev.gitlab.io/base-of-knowledges/frameworks/flask/index.html"
+      }
+    ]
+  },
+  {
+    "name": "base-of-ideas",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://peskovdev.gitlab.io/base-of-ideas/"
+      }
+    ]
+  },
+  {
+    "name": "roadmap",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://peskovdev.gitlab.io/roadmap/"
+      }
+    ]
+  },
+  {
+    "name": "workflow-keu",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://workflow-keu.gitlab.io/documentation/"
+      }
+    ]
+  },
+  {
+    "name": "right-history",
+    "request": [
+      {
+        "app": "firefox",
+        "arguments": "--new-window https://freedom-pride-chat.gitlab.io/right-history/"
+      }
+    ]
+  }
+]
