@@ -4,8 +4,7 @@ local g = vim.g
 local cmd = vim.cmd             -- execute Vim commands
 
 -- markdown
-map('n', '<M-m>', ':MarkdownPreview<CR>', noremap)
-map('n', '<M-M>', ':MarkdownPreviewStop<CR>', noremap)
+map('n', '<c-m>', ':MarkdownPreview<CR>', noremap)
 cmd([[
 function OpenMarkdownPreview (url)
     execute "silent ! firefox --new-window " . a:url
