@@ -1,6 +1,0 @@
-[submodule ".public_projects/rwpm"]
-	path = .public_projects/rwpm
-	url = https://github.com/linuxcraft/rwpm.git
-[submodule ".public_projects/tmux-workspace-manager"]
-	path = .public_projects/tmux-workspace-manager
-	url = https://github.com/linuxcraft/tmux-workspace-manager.git

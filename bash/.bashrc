@@ -75,7 +75,9 @@ alias vi='vim'
 alias nvim='vim'
 alias hg='history | grep'
 alias tat='tmux attach -t'
+alias ta='tmux attach'
 alias tns='tmux new-session -s'
+alias btop='btop --utf-force'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

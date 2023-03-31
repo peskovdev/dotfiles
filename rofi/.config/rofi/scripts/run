@@ -1,7 +1,0 @@
-#!/bin/bash
-
-xkb-switch -s us &
-
-rofi_command='rofi -m -1 -theme themes/run.rasi'
-
-$rofi_command -show run -modi run
