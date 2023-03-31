@@ -1,16 +1,17 @@
 #!/bin/bash
 
 directories=(
-  /home/inauris/settings/dotfiles/
   /home/inauris/settings/dot-diff/
+  /home/inauris/settings/dotfiles/
+  /home/inauris/settings/dotfiles/.public_projects/rwpm
+  /home/inauris/settings/dotfiles/.public_projects/tmux-workspace-manager
+  /home/inauris/settings/dotfiles-max/
   /home/inauris/projects/base-of-ideas/
   /home/inauris/projects/base-of-knowledges/
   /home/inauris/projects/roadmap/
   /home/inauris/projects/pheidippides/
   /home/inauris/projects/aiogram_bots/
   /home/inauris/pictures/wallpapers/
-  /home/inauris/settings/dotfiles/.public_projects/rwpm
-  /home/inauris/settings/dotfiles/.public_projects/tmux-workspace-manager
 )
 for directory in "${directories[@]}"
 do
