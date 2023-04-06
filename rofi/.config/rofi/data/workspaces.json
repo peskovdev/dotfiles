@@ -141,7 +141,7 @@
   },
   {
     "session_name": "pheidippides",
-    "directory": "/home/inauris/projects/pheidippides",
+    "directory": "/home/inauris/projects/pheidippides/src",
     "windows": [
       {
         "window_name": "nvim",
@@ -263,7 +263,7 @@
   },
   {
     "session_name": "pyTelegramBotAPI_bots",
-    "directory": "/home/inauris/projects/pyTelegramBotAPI_bots",
+    "directory": "/home/inauris/projects/pytelegrambotapi_bots",
     "windows": [
       {
         "window_name": "nvim",
