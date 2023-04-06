@@ -15,16 +15,19 @@ g.silicon = {
   -- ["shadow-blur-radius"] = 50,
 
   -- Light-themes:
-  theme = "Monokai Extended Light",
-  -- theme = "GitHub",
-  background = '#a1c3e6',
-  ["shadow-blur-radius"] = 20,
+  theme = "GitHub",
+  background = '#7264f5',
+  ["shadow-color"] = '#ace6fc',
+  ["shadow-blur-radius"] = 150,
+  ["shadow-offset-x"] = 70, -- this values should be below the paddings
+  ["shadow-offset-y"] = 80,
 
   ["pad-horiz"] = 72,
   ["pad-vert"] = 90,
+  ["window-controls"] = false,
   output = '~/pictures/silicon/silicon-{time:%Y-%m-%d-%H%M%S}.png'
 }
 
 
 map('n', '<leader>s', ':Silicon<CR>', default_opts)
-map('v', '<leader>s', ':\'<,\'>Silicon<CR>', noremap)
+map('v', '<leader>s', ':\'<,\'>Silicon<CR>', default_opts)
