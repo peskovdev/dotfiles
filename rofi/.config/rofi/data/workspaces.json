@@ -1,5 +1,23 @@
 [
   {
+    "session_name": "university-admissions-office",
+    "directory": "/home/inauris/projects/university-admissions-office",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "python manage.py runserver"]
+      }
+    ]
+  },
+  {
     "session_name": "codequest",
     "directory": "/home/inauris/projects/codequest",
     "windows": [
