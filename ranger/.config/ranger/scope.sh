@@ -48,6 +48,7 @@ OPENSCAD_IMGSIZE=${RNGR_OPENSCAD_IMGSIZE:-1000,1000}
 OPENSCAD_COLORSCHEME=${RNGR_OPENSCAD_COLORSCHEME:-Tomorrow Night}
 
 handle_extension() {
+    local DEFAULT_SIZE="1920x1080"
     case "${FILE_EXTENSION_LOWER}" in
         ## Archive
         a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
@@ -74,6 +75,16 @@ handle_extension() {
             exiftool "${FILE_PATH}" && exit 5
             exit 1;;
 
+        fb2)
+            ## Preview as image
+            if [[ "${PV_IMAGE_ENABLED}" == 'True' ]]; then
+              ebook-meta --get-cover="${IMAGE_CACHE_PATH}" -- "${FILE_PATH}" \
+                  >/dev/null && exit 6
+            fi
+            ## Preview as markdown conversion
+            pandoc -s -t markdown -- "${FILE_PATH}" && exit 5
+            exit 1;;
+
         ## BitTorrent
         torrent)
             transmission-show -- "${FILE_PATH}" && exit 5
@@ -94,14 +105,22 @@ handle_extension() {
             xlsx2csv -- "${FILE_PATH}" && exit 5
             exit 1;;
 
-        ## HTML
-        htm|html|xhtml)
-            ## Preview as text conversion
-            w3m -dump "${FILE_PATH}" && exit 5
-            lynx -dump -- "${FILE_PATH}" && exit 5
-            elinks -dump "${FILE_PATH}" && exit 5
+        ## Docx
+        docx)
+            ## Preview as csv conversion
+            ## Uses: https://github.com/dilshod/xlsx2csv
+            if [[ "${PV_IMAGE_ENABLED}" == 'True' ]]; then
+              # Preview as image
+              unoconv --stdout "${FILE_PATH}" | pdftoppm -f 1 -l 1 \
+                       -scale-to-x "${DEFAULT_SIZE%x*}" \
+                       -scale-to-y -1 \
+                       -singlefile \
+                       -jpeg -tiffcompression jpeg \
+                       -- - "${IMAGE_CACHE_PATH%.*}" \
+                  && exit 6
+            fi
             pandoc -s -t markdown -- "${FILE_PATH}" && exit 5
-            ;;
+            exit 1;;
 
         ## JSON
         json)
@@ -145,10 +164,10 @@ handle_image() {
             exit 1;;
 
         ## DjVu
-        # image/vnd.djvu)
-        #     ddjvu -format=tiff -quality=90 -page=1 -size="${DEFAULT_SIZE}" \
-        #           - "${IMAGE_CACHE_PATH}" < "${FILE_PATH}" \
-        #           && exit 6 || exit 1;;
+        image/vnd.djvu)
+            ddjvu -format=tiff -quality=90 -page=1 -size="${DEFAULT_SIZE}" \
+                  - "${IMAGE_CACHE_PATH}" < "${FILE_PATH}" \
+                  && exit 6 || exit 1;;
 
         ## GIF files
         */gif)
@@ -175,6 +194,33 @@ handle_image() {
             # Thumbnail
             ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
             exit 1;;
+        ## Audio
+        audio/*)
+            # Get embedded thumbnail
+            ffmpeg -i "${FILE_PATH}" -map 0:v -map -0:V -c copy \
+              "${IMAGE_CACHE_PATH}" && exit 6;;
+
+
+        # Image preview for odt|ods|odp|sxw|ppt|doc|docx|pptx)
+        # For xls and xlsx uncomment 2 bottom lines
+        # application/vnd.ms-excel|\
+        # application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|\
+        application/vnd.oasis.opendocument.*|\
+        application/vnd.sun.xml.writer|\
+        application/vnd.ms-powerpoint|\
+        application/msword|\
+        application/vnd.openxmlformats-officedocument.wordprocessingml.document|\
+        application/vnd.openxmlformats-officedocument.presentationml.presentation)
+            # Preview as image
+            unoconv --stdout "${FILE_PATH}" | pdftoppm -f 1 -l 1 \
+                     -scale-to-x "${DEFAULT_SIZE%x*}" \
+                     -scale-to-y -1 \
+                     -singlefile \
+                     -jpeg -tiffcompression jpeg \
+                     -- - "${IMAGE_CACHE_PATH%.*}" \
+                && exit 6
+            exit 1;;
+
 
         # PDF
         application/pdf)
@@ -187,15 +233,15 @@ handle_image() {
                 && exit 6 || exit 1;;
 
 
-        ## ePub, MOBI, FB2 (using Calibre)
-        # application/epub+zip|application/x-mobipocket-ebook|\
-        # application/x-fictionbook+xml)
-        #     # ePub (using https://github.com/marianosimone/epub-thumbnailer)
-        #     epub-thumbnailer "${FILE_PATH}" "${IMAGE_CACHE_PATH}" \
-        #         "${DEFAULT_SIZE%x*}" && exit 6
-        #     ebook-meta --get-cover="${IMAGE_CACHE_PATH}" -- "${FILE_PATH}" \
-        #         >/dev/null && exit 6
-        #     exit 1;;
+        # ePub, MOBI, FB2 (using Calibre)
+        application/epub+zip|application/x-mobipocket-ebook|\
+        application/x-fictionbook+xml)
+            # ePub (using https://github.com/marianosimone/epub-thumbnailer)
+            epub-thumbnailer "${FILE_PATH}" "${IMAGE_CACHE_PATH}" \
+                "${DEFAULT_SIZE%x*}" && exit 6
+            ebook-meta --get-cover="${IMAGE_CACHE_PATH}" -- "${FILE_PATH}" \
+                >/dev/null && exit 6
+            exit 1;;
 
         ## Font
         application/font*|application/*opentype)
