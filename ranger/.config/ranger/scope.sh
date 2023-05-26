@@ -293,6 +293,96 @@ handle_mime() {
             xls2csv -- "${FILE_PATH}" && exit 5
             exit 1;;
 
+        ## SQLite
+        *sqlite3)
+            # Preview as text conversion
+            # Install "sqlite-utils" for beatiful formatting
+            local sqlite_table_limit=20
+            local sqlite_row_limit=5
+            sqlite_tables="$( sqlite3 "file:${FILE_PATH}?mode=ro" '.tables' )" \
+                || exit 1
+            [ -z "${sqlite_tables}" ] &&
+                { echo "Empty SQLite database." && exit 5; }
+            sqlite_show_query() {
+                sqlite-utils query "${FILE_PATH}" "${1}" --table --fmt fancy_grid \
+                || sqlite3 "file:${FILE_PATH}?mode=ro" "${1}" -header -column
+            }
+            ## Display basic table information
+            sqlite_rowcount_query="$(
+                sqlite3 "file:${FILE_PATH}?mode=ro" -noheader \
+                    'SELECT group_concat(
+                        "SELECT """ || name || """ AS tblname,
+                                          count(*) AS rowcount
+                         FROM " || name,
+                        " UNION ALL "
+                    )
+                    FROM sqlite_master
+                    WHERE type="table" AND name NOT LIKE "sqlite_%";'
+            )"
+            sqlite_show_query \
+                "SELECT tblname AS 'table', rowcount AS 'count',
+                (
+                    SELECT '(' || group_concat(name, ', ') || ')'
+                    FROM pragma_table_info(tblname)
+                ) AS 'columns',
+                (
+                    SELECT '(' || group_concat(
+                        upper(type) || (
+                            CASE WHEN pk > 0 THEN ' PRIMARY KEY' ELSE '' END
+                        ),
+                        ', '
+                    ) || ')'
+                    FROM pragma_table_info(tblname)
+                ) AS 'types'
+                FROM (${sqlite_rowcount_query});"
+            if [ "${sqlite_table_limit}" -gt 0 ] &&
+               [ "${sqlite_row_limit}" -ge 0 ]; then
+                ## Do exhaustive preview
+                echo && printf '>%.0s' $( seq "${PV_WIDTH}" ) && echo
+                sqlite3 "file:${FILE_PATH}?mode=ro" -noheader \
+                    "SELECT name FROM sqlite_master
+                    WHERE type='table' AND name NOT LIKE 'sqlite_%'
+                    LIMIT ${sqlite_table_limit};" |
+                    while read -r sqlite_table; do
+                        sqlite_rowcount="$(
+                            sqlite3 "file:${FILE_PATH}?mode=ro" -noheader \
+                                "SELECT count(*) FROM ${sqlite_table}"
+                        )"
+                        echo
+                        if [ "${sqlite_row_limit}" -gt 0 ] &&
+                           [ "${sqlite_row_limit}" \
+                             -lt "${sqlite_rowcount}" ]; then
+                            echo "${sqlite_table} [${sqlite_row_limit} of ${sqlite_rowcount}]:"
+                            sqlite_ellipsis_query="$(
+                                sqlite3 "file:${FILE_PATH}?mode=ro" -noheader \
+                                    "SELECT 'SELECT ' || group_concat(
+                                        '''...''', ', '
+                                    )
+                                    FROM pragma_table_info(
+                                        '${sqlite_table}'
+                                    );"
+                            )"
+                            sqlite_show_query \
+                                "SELECT * FROM (
+                                    SELECT * FROM ${sqlite_table} LIMIT 1
+                                )
+                                UNION ALL ${sqlite_ellipsis_query} UNION ALL
+                                SELECT * FROM (
+                                    SELECT * FROM ${sqlite_table}
+                                    LIMIT (${sqlite_row_limit} - 1)
+                                    OFFSET (
+                                        ${sqlite_rowcount}
+                                        - (${sqlite_row_limit} - 1)
+                                    )
+                                );"
+                        else
+                            echo "${sqlite_table} [${sqlite_rowcount}]:"
+                            sqlite_show_query "SELECT * FROM ${sqlite_table};"
+                        fi
+                    done
+            fi
+            exit 5;;
+
         ## Text
         text/* | */xml)
             ## Syntax highlight
