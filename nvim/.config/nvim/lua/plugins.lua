@@ -66,6 +66,8 @@ return require('packer').startup(function()
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
       require("toggleterm").setup()
   end}
+  -- right indentation
+  use 'Vimjas/vim-python-pep8-indent'
 
   -----------------------------------------------------------
   -- HTML, CSS & MarkDown
