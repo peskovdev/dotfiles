@@ -11,6 +11,8 @@ function _RUN_TOGGLE()
     _pyrun_toggle()
   elseif filetype == "go" then
     _gorun_toggle()
+  elseif filetype == "sh" then
+    _shrun_toggle()
   else
     print("Unknown file type: " .. filetype)
   end
@@ -18,6 +20,21 @@ end
 function _pyrun_toggle()
   Terminal:new({
     cmd = "python "..vim.api.nvim_buf_get_name(0),
+    -- direction = "horizontal",
+    direction = "float",
+    float_opts = {
+      border = "double",
+      col = 85,
+      width = 90,
+      height = 30,
+    },
+    close_on_exit = false,
+    count = 9,
+  }):toggle()
+end
+function _shrun_toggle()
+  Terminal:new({
+    cmd = "source "..vim.api.nvim_buf_get_name(0),
     -- direction = "horizontal",
     direction = "float",
     float_opts = {
