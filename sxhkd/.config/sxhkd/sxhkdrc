@@ -113,8 +113,8 @@ super + {c,o,f}
 super + {v,r,e,a}
     $XDG_CONFIG_HOME/rofi/scripts/{colorscheme,record,rwpm -s '/home/inauris/pictures',tmuxwm}
 
-super + {z,b}
-    $XDG_CONFIG_HOME/rofi/scripts/{menu,mdbooks}
+super + {z,b,i}
+    $XDG_CONFIG_HOME/rofi/scripts/{menu,mdbooks,mullvad}
 
 #--------------------- Screenshot ---------------------#
 

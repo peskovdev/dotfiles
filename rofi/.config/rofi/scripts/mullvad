@@ -1,0 +1,11 @@
+#!/bin/bash
+
+xkb-switch -s us &
+
+rofi_command='rofi -m -1 -theme themes/run.rasi'
+
+# by country
+mullvad relay set location $(mullvad relay list | grep -e '^\w' | $rofi_command -dmenu -i -window-title "Mullvad: $(mullvad status | cut -d " " -f 5-)" |  sed 's/.*(//' | sed 's/)//')
+# mullvad relay set location $(mullvad relay list | grep -e '^\w' | $rofi_command -dmenu -i -window-title "Mullvad: $(mullvad status | sed 's/ \w*-\w*-\w*-[0-9]\{3\}\sin//')" |  sed 's/.*(//' | sed 's/)//')
+# by code
+# mullvad relay set hostname $(mullvad relay list | sed 's/\t//g' | grep -e '\w-\w' | cut -d " " -f 1 | $rofi_command -dmenu -window-title "Select new server")
