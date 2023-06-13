@@ -71,6 +71,32 @@ require("mason-lspconfig").setup({
   ensure_installed = servers
 })
 
-for _, server in ipairs(servers) do
-  require('lspconfig')[server].setup { on_attach = on_attach }
-end
+require("mason-lspconfig").setup_handlers {
+    function (server_name)
+        require('lspconfig')[server_name].setup {
+          on_attach = on_attach,
+          settings = servers[server_name],
+        }
+    end,
+    ["pylsp"] = function ()
+      require("lspconfig").pylsp.setup {
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = {
+                maxLineLength = 100
+              },
+              -- configurationSources = {"pylint"},
+              -- pylint = { enabled = true },
+              -- -- Other settings
+              -- flake8 = { enabled = false },
+              -- pyflakes = { enabled = false },
+              -- black = { enabled = true },
+              -- isort = { enabled = true },
+              -- pyls_mypy = { enabled = true },
+            }
+          },
+        }
+      }
+    end
+}
