@@ -35,7 +35,7 @@ syntax enable
 -- uses 4 spaces in .py
 -- uses 1 tab in .go which expressed as 3 spaces
 cmd([[
-au FileType python setl et sw=4 ts=4 colorcolumn=80
+au FileType python setl et sw=4 ts=4 colorcolumn=100
 au FileType go setl noet sw=3 ts=3
 ]])
 opt.expandtab = true            -- uses spaces instead of tabs
