@@ -96,3 +96,6 @@ map('n', '<F5>', ':65vsplit | term python %<CR>i', default_opts)
 
 -- config reloading
 map('n', '<c-w>r', ':source $MYVIMRC<CR>', noremap)
+
+vim.keymap.set('n', '<leader>dd', function() require("duck").hatch("🦆", 1) end, {})
+vim.keymap.set('n', '<leader>dp', function() require("duck").hatch("ඞ", 7) end, {})

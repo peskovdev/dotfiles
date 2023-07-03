@@ -144,6 +144,8 @@ return require('packer').startup(function()
   -----------------------------------------------------------
   -- ПЛАГИНЫ ВНЕШНЕГО ВИДА
   -----------------------------------------------------------
+  -- MY PETS
+  use 'tamton-aquib/duck.nvim'
   -- Иконки
   use 'nvim-tree/nvim-web-devicons'
 
