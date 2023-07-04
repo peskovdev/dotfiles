@@ -8,6 +8,12 @@ text/calendar=userapp-Thunderbird-EYERU1.desktop
 application/x-extension-ics=userapp-Thunderbird-EYERU1.desktop
 x-scheme-handler/webcals=userapp-Thunderbird-EYERU1.desktop
 application/pdf=org.pwmt.zathura.desktop
+application/vnd.oasis.opendocument.*=onlyoffice-desktopeditors.desktop
+application/vnd.sun.xml.writer=onlyoffice-desktopeditors.desktop
+application/vnd.ms-powerpoint=onlyoffice-desktopeditors.desktop
+application/msword=onlyoffice-desktopeditors.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=onlyoffice-desktopeditors.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-MH9KU1.desktop;
