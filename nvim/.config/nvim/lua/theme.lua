@@ -15,24 +15,29 @@ opt.termguicolors = true      --  24-bit RGB colors
 -- cmd.colorscheme 'ayu'
 
 -- catppuccin
--- require("catppuccin").setup({
---   flavour = "latte", -- latte, frappe, macchiato, mocha
---   background = { -- :h background
---       light = "latte",
---       dark = "mocha",
---   },
---   transparent_background = true,
---   term_colors = false,
---
--- })
--- cmd.colorscheme 'catppuccin'
-
--- github-themes
-require("github-theme").setup({
-  theme_style = "light",
-  transparent = true, -- background
+require("catppuccin").setup({
+  compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
+  flavour = "latte", -- latte, frappe, macchiato, mocha
+  background = { -- :h background
+      light = "latte",
+      dark = "mocha",
+  },
+  transparent_background = false,
 })
 
+-- github-theme: Default options
+require('github-theme').setup({
+  options = {
+   -- Compiled file's destination location
+    compile_path = vim.fn.stdpath('cache') .. '/github-theme',
+    compile_file_suffix = '_compiled', -- Compiled file suffix
+    transparent = true,       -- Disable setting background
+    terminal_colors = false,    -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
+  },
+})
+
+cmd.colorscheme 'catppuccin'
+-- cmd.colorscheme 'github_light_tritanopia'
 
 -----------------------------------------------------------
 -- Dark

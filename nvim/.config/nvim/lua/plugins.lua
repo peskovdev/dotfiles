@@ -168,6 +168,6 @@ return require('packer').startup(function()
   use 'joshdick/onedark.vim'
   use 'ayu-theme/ayu-vim'
   use { "catppuccin/nvim", as = "catppuccin" }
-  use { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }
+  use { 'projekt0n/github-nvim-theme' }
 
 end)
