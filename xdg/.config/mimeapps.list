@@ -14,6 +14,7 @@ application/vnd.ms-powerpoint=onlyoffice-desktopeditors.desktop
 application/msword=onlyoffice-desktopeditors.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop
 application/vnd.openxmlformats-officedocument.presentationml.presentation=onlyoffice-desktopeditors.desktop
+inode/directory=alacritty-ranger.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-MH9KU1.desktop;
@@ -21,19 +22,17 @@ x-scheme-handler/mailto=userapp-Thunderbird-48HWU1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-48HWU1.desktop;
 x-scheme-handler/webcal=userapp-Thunderbird-EYERU1.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-EYERU1.desktop;
-
-text/plain=userapp-open-with-nvim-967E71.desktop;
-text/x-config=userapp-open-with-nvim-967E71.desktop;
-application/json=userapp-open-with-nvim-967E71.desktop;
-
-text/x-csrc=userapp-open-with-nvim-967E71.desktop
-text/x-c++src=userapp-open-with-nvim-967E71.desktop
-text/x-python=userapp-open-with-nvim-967E71.desktop
-text/x-go=userapp-open-with-nvim-967E71.desktop
-application/javascript=userapp-open-with-nvim-967E71.desktop
-text/x-lua=userapp-open-with-nvim-967E71.desktop
-text/x-mako=userapp-open-with-nvim-967E71.desktop
-application/x-shellscript=userapp-open-with-nvim-967E71.desktop
-text/x-makefile=userapp-open-with-nvim-967E71.desktop
-text/x-dockerfile=userapp-open-with-nvim-967E71.desktop
-text/x-vue=userapp-open-with-nvim-967E71.desktop
+text/plain=alacritty-nvim.desktop;
+text/x-config=alacritty-nvim.desktop;
+application/json=alacritty-nvim.desktop
+text/x-csrc=alacritty-nvim.desktop;
+text/x-c++src=alacritty-nvim.desktop;
+text/x-python=alacritty-nvim.desktop;
+text/x-go=alacritty-nvim.desktop;
+application/javascript=alacritty-nvim.desktop;
+text/x-lua=alacritty-nvim.desktop;
+text/x-mako=alacritty-nvim.desktop;
+application/x-shellscript=alacritty-nvim.desktop;
+text/x-makefile=alacritty-nvim.desktop;
+text/x-dockerfile=alacritty-nvim.desktop;
+text/x-vue=alacritty-nvim.desktop;

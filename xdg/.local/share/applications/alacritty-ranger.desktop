@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec=alacritty -e ranger %U
+# Exec=alacritty --working-directory %U
+Name=ranger-nvim
+MimeType=inode/directory;
+Comment=Custom definition for ranger-nvim
