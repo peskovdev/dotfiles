@@ -1,10 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
-Version=1.0
 Type=Application
-NoDisplay=true
-Exec=alacritty -e ranger %U
-# Exec=alacritty --working-directory %U
 Name=ranger-nvim
+Comment=Launches the ranger file manager
+Icon=utilities-terminal
+Terminal=false
+Exec=alacritty -e ranger %F
+Categories=ConsoleOnly;System;FileTools;FileManager
 MimeType=inode/directory;
-Comment=Custom definition for ranger-nvim
+Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python
