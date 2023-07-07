@@ -20,6 +20,8 @@ image/x-icon=sxiv.desktop
 video/mp4=mpv.desktop
 video/mpeg=mpv.desktop
 inode/directory=alacritty-ranger.desktop
+application/zip=alacritty-ranger-select.desktop
+application/x-tar=alacritty-ranger-select.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-MH9KU1.desktop;
