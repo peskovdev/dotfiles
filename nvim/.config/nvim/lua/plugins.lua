@@ -29,7 +29,7 @@ return require('packer').startup(function()
   -----------------------------------------------------------
   -- Tabs & Buffers
   -- Head-panel
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons',
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons',
   config = function()
       require("bufferline").setup{}
   end, }
@@ -163,7 +163,7 @@ return require('packer').startup(function()
 
   -- Информационная строка внизу
   use {'nvim-lualine/lualine.nvim',
-  requires = {'kyazdani42/nvim-web-devicons', opt = true},
+  requires = {'nvim-tree/nvim-web-devicons', opt = true},
   config = function()
       require('lualine').setup()
   end, }
