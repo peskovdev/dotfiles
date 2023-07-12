@@ -4,7 +4,7 @@ if poetry init --no-interaction
 then
   poetry env use python
   source $(poetry env info --path)/bin/activate &&
-  poetry add --group dev pynvim isort black
+  poetry add --group dev pynvim isort black mypy
 else
   poetry env use python
   source $(poetry env info --path)/bin/activate &&
