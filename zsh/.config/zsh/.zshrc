@@ -118,7 +118,7 @@ alias tns='tmux new-session -s'
 alias yaya='yay -Syu --noconfirm'
 
 # Download only audio
-alias ydm='youtube-dl -f bestaudio --output "%(title)s.%(ext)s" --extract-audio --audio-format mp3'
+alias ydm='yt-dlp --audio-quality 0 --output "%(title)s.%(ext)s" --extract-audio --audio-format mp3'
 
 # Simple download
 alias yd='yt-dlp'
@@ -133,6 +133,7 @@ alias ydpl='yt-dlp -i -f mp4 --yes-playlist'
 alias ydplw='yt-dlp -f worst --merge-output-format mp4 --yes-playlist'
 # Download playlist best
 alias ydplb='yt-dlp -f best --merge-output-format mp4 --yes-playlist'
+alias ydplm='yt-dlp -x --audio-format mp3 --audio-quality 0 --yes-playlist'
 alias rr='. ranger'
 
 # alias srf='systemctl restart vsftpd'
