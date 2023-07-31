@@ -146,6 +146,8 @@ return require('packer').startup(function()
   -----------------------------------------------------------
   -- MY PETS
   use 'tamton-aquib/duck.nvim'
+
+  -- Arcade Game
   use {'seandewar/killersheep.nvim',
   config = function()
     require("killersheep").setup {
