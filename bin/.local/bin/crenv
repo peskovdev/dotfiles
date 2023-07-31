@@ -9,4 +9,5 @@ else
   poetry env use python
   source $(poetry env info --path)/bin/activate &&
   poetry install
+  poetry add --group dev pynvim isort black mypy
 fi
