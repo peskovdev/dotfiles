@@ -52,6 +52,9 @@ TelegramDesktop)
     echo "desktop=27"
     ;;
 superProductivity)
-    echo "desktop=20"
+    echo "desktop=17"
+    ;;
+kronometer)
+    echo "state=floating"
     ;;
 esac
