@@ -1,7 +1,91 @@
 [
   {
-    "session_name": "university-admissions-office",
-    "directory": "/home/inauris/projects/university-admissions-office",
+    "session_name": "fastapi-chat",
+    "directory": "/home/inauris/projects/fastapi-chat",
+    "windows": [
+      {
+        "window_name": "app",
+        "commands": ["v", "cd app", "vi", "\\df"]
+      },
+      {
+        "window_name": "tests",
+        "commands": ["v", "cd tests", "vi", "\\df"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "python -m app"]
+      }
+    ]
+  },
+  {
+    "session_name": "hw9-async",
+    "directory": "/home/inauris/projects/a1_shabaer/hw9-async",
+    "windows": [
+      {
+        "window_name": "app",
+        "commands": ["v", "cd balance", "vi", "\\df"]
+      },
+      {
+        "window_name": "tests",
+        "commands": ["v", "cd tests", "vi", "\\df"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v", "cd env", ""]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", ""]
+      }
+    ]
+  },
+  {
+    "session_name": "pytest-training",
+    "directory": "/home/inauris/projects/pytest-training",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "cd app", "vi", "\\df"]
+      },
+      {
+        "window_name": "tests",
+        "commands": ["v", "cd tests", "vi", "\\df"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v"]
+      }
+    ]
+  },
+  {
+    "session_name": "hw6-testing",
+    "directory": "/home/inauris/projects/a1_shabaer/hw6-testing",
+    "windows": [
+      {
+        "window_name": "app",
+        "commands": ["v", "cd bookmarker", "vi", "\\df"]
+      },
+      {
+        "window_name": "tests",
+        "commands": ["v", "cd tests", "vi", "\\df"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", ""]
+      }
+    ]
+  },
+  {
+    "session_name": "hw4-db-migrations",
+    "directory": "/home/inauris/projects/a1_shabaer/hw4_db_migrations",
     "windows": [
       {
         "window_name": "nvim",
@@ -13,7 +97,173 @@
       },
       {
         "window_name": "run",
-        "commands": ["v", "python manage.py runserver"]
+        "commands": ["v"]
+      }
+    ]
+  },
+  {
+    "session_name": "fundmatch",
+    "directory": "/home/inauris/projects/hk-krg-06-23/naked-musk",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "uvicorn app.main:app --reload"]
+      }
+    ]
+  },
+  {
+    "session_name": "leetcode",
+    "directory": "/home/inauris/projects/leetcode",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "y-contest",
+    "directory": "/home/inauris/projects/a1_shabaer/contest",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": []
+      }
+    ]
+  },
+  {
+    "session_name": "hw3-dbindex",
+    "directory": "/home/inauris/projects/a1_shabaer/hw3_dbindex",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["cd solution", "vi", "\\df"]
+      },
+      {
+        "window_name": "psql",
+        "commands": ["psql -h localhost -p 5432 -U user -d homework"]
+      },
+      {
+        "window_name": "tests",
+        "commands": ["cd src/tests", "rr"]
+      },
+      {
+        "window_name": "files",
+        "commands": ["rr"]
+      }
+    ]
+  },
+  {
+    "session_name": "hw2-architecture",
+    "directory": "/home/inauris/projects/a1_shabaer/hw2-architecture/backend",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run_db",
+        "commands": ["v", "cd ../database/postgresql-docker-image/", "docker-compose up --build"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "uvicorn main:app --reload"]
+      }
+    ]
+  },
+  {
+    "session_name": "hw1-viplink",
+    "directory": "/home/inauris/projects/a1_shabaer/hw1-viplink",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "make run"]
+      }
+    ]
+  },
+  {
+    "session_name": "yandex-lavka",
+    "directory": "/home/inauris/projects/yandex-lavka",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "vi", "\\df"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "uvicorn app.main:app --reload"]
+      }
+    ]
+  },
+  {
+    "session_name": "fastapi-learn",
+    "directory": "/home/inauris/projects/fastapi-learn",
+    "windows": [
+      {
+        "window_name": "nvim",
+        "commands": ["v", "vi", "\\df"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "uvicorn main:app --reload"]
+      }
+    ]
+  },
+  {
+    "session_name": "university-staff-manager",
+    "directory": "/home/inauris/projects/university-staff-manager",
+    "windows": [
+      {
+        "window_name": "files",
+        "commands": ["v", "rr"]
+      },
+      {
+        "window_name": "nvim",
+        "commands": ["v", "vi", "\\df"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["tmux select-window -t 2", "clear", "v", "python manage.py runserver"]
       }
     ]
   },
@@ -126,7 +376,7 @@
     ]
   },
   {
-    "session_name": "resume",
+    "session_name": "my_cv_(resume,peskovdev)",
     "directory": "/home/inauris/projects/peskovdev.github.io",
     "windows": [
       {
@@ -171,7 +421,7 @@
       },
       {
         "window_name": "run",
-        "commands": ["v", "python server.py"]
+        "commands": ["v"]
       }
     ]
   },
