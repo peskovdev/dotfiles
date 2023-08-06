@@ -82,8 +82,14 @@ require("mason").setup({
     }
   }
 })
+
+-- Write list with server_name for ensure_installed
+local server_names = {}
+for server_name, _ in pairs(servers) do
+  table.insert(server_names, server_name)
+end
 require("mason-lspconfig").setup({
-  ensure_installed = servers
+  ensure_installed = server_names
 })
 
 require("mason-lspconfig").setup_handlers {
