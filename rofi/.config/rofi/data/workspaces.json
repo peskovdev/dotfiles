@@ -1,15 +1,15 @@
 [
   {
-    "session_name": "fastapi-chat",
-    "directory": "/home/inauris/projects/fastapi-chat",
+    "session_name": "icpc-trainer",
+    "directory": "/home/inauris/projects/icpc-trainer",
     "windows": [
       {
         "window_name": "app",
-        "commands": ["v", "cd app", "vi", "\\df"]
+        "commands": ["v", "cd app", "vi", ",df"]
       },
       {
         "window_name": "tests",
-        "commands": ["v", "cd tests", "vi", "\\df"]
+        "commands": ["v", "cd tests", "vi", ",df"]
       },
       {
         "window_name": "term",
@@ -22,16 +22,52 @@
     ]
   },
   {
+    "session_name": "fastapi-chat",
+    "directory": "/home/inauris/projects/fastapi-chat",
+    "windows": [
+      {
+        "window_name": "app",
+        "commands": ["v", "cd app", "vi", ",df"]
+      },
+      {
+        "window_name": "tests",
+        "commands": ["v", "cd tests", "vi", ",df"]
+      },
+      {
+        "window_name": "term",
+        "commands": ["v"]
+      },
+      {
+        "window_name": "run",
+        "commands": ["v", "python -m app"]
+      }
+    ]
+  },
+  {
+    "session_name": "postgres",
+    "directory": "/home/inauris/projects/postgres-docker",
+    "windows": [
+      {
+        "window_name": "term",
+        "commands": []
+      },
+      {
+        "window_name": "run",
+        "commands": ["docker-compose up"]
+      }
+    ]
+  },
+  {
     "session_name": "hw9-async",
     "directory": "/home/inauris/projects/a1_shabaer/hw9-async",
     "windows": [
       {
         "window_name": "app",
-        "commands": ["v", "cd balance", "vi", "\\df"]
+        "commands": ["v", "cd balance", "vi", ",df"]
       },
       {
         "window_name": "tests",
-        "commands": ["v", "cd tests", "vi", "\\df"]
+        "commands": ["v", "cd tests", "vi", ",df"]
       },
       {
         "window_name": "term",
@@ -49,11 +85,11 @@
     "windows": [
       {
         "window_name": "nvim",
-        "commands": ["v", "cd app", "vi", "\\df"]
+        "commands": ["v", "cd app", "vi", ",df"]
       },
       {
         "window_name": "tests",
-        "commands": ["v", "cd tests", "vi", "\\df"]
+        "commands": ["v", "cd tests", "vi", ",df"]
       },
       {
         "window_name": "run",
@@ -67,11 +103,11 @@
     "windows": [
       {
         "window_name": "app",
-        "commands": ["v", "cd bookmarker", "vi", "\\df"]
+        "commands": ["v", "cd bookmarker", "vi", ",df"]
       },
       {
         "window_name": "tests",
-        "commands": ["v", "cd tests", "vi", "\\df"]
+        "commands": ["v", "cd tests", "vi", ",df"]
       },
       {
         "window_name": "term",
@@ -103,7 +139,7 @@
   },
   {
     "session_name": "fundmatch",
-    "directory": "/home/inauris/projects/hk-krg-06-23/naked-musk",
+    "directory": "/home/inauris/projects/fundmatch",
     "windows": [
       {
         "window_name": "nvim",
@@ -115,7 +151,7 @@
       },
       {
         "window_name": "run",
-        "commands": ["v", "uvicorn app.main:app --reload"]
+        "commands": ["v", ""]
       }
     ]
   },
@@ -153,7 +189,7 @@
     "windows": [
       {
         "window_name": "nvim",
-        "commands": ["cd solution", "vi", "\\df"]
+        "commands": ["cd solution", "vi", ",df"]
       },
       {
         "window_name": "psql",
@@ -215,7 +251,7 @@
     "windows": [
       {
         "window_name": "nvim",
-        "commands": ["v", "vi", "\\df"]
+        "commands": ["v", "vi", ",df"]
       },
       {
         "window_name": "term",
@@ -233,7 +269,7 @@
     "windows": [
       {
         "window_name": "nvim",
-        "commands": ["v", "vi", "\\df"]
+        "commands": ["v", "vi", ",df"]
       },
       {
         "window_name": "term",
@@ -255,7 +291,7 @@
       },
       {
         "window_name": "nvim",
-        "commands": ["v", "vi", "\\df"]
+        "commands": ["v", "vi", ",df"]
       },
       {
         "window_name": "term",
