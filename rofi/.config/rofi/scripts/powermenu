@@ -26,12 +26,12 @@ case $chosen in
 "$lock")
     xset dpms force standby
     xkb-switch -s us
-    physlock
+    slock
     ;;
 "$suspend")    
     systemctl suspend
     xkb-switch -s us
-    physlock
+    slock
     ;;
 "$logout")
     bspc quit
