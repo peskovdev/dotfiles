@@ -26,7 +26,6 @@ Anki)
 thunderbird)
     echo "state=floating"
     ;;
-
 qBittorrent)
     echo "state=floating rectangle=1918x1055+0+25"
     ;;
@@ -49,7 +48,7 @@ flameshot)
     echo "state=floating"
     ;;
 TelegramDesktop)
-    echo "desktop=27"
+    echo "desktop=7"
     ;;
 superProductivity)
     echo "desktop=17"
