@@ -22,6 +22,7 @@ g.auto_save = true
 g.vim_markdown_folding_disabled = true
 g.vim_markdown_new_list_item_indent = false
 g.vim_markdown_fenced_languages = {'py=python', 'js=javascript'}
+g.mapleader = ","
 -- g.vim_markdown_toc_autofit = true
 -- g.tabular_loaded = true
 
