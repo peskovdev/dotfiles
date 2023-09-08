@@ -1,6 +1,8 @@
 [Default Applications]
 x-scheme-handler/tg=userapp-Telegram Desktop-MH9KU1.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-48HWU1.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
 message/rfc822=userapp-Thunderbird-48HWU1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-48HWU1.desktop
 x-scheme-handler/webcal=userapp-Thunderbird-EYERU1.desktop
