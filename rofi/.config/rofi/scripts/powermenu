@@ -29,9 +29,7 @@ case $chosen in
     slock
     ;;
 "$suspend")    
-    systemctl suspend
-    xkb-switch -s us
-    slock
+    systemctl hibernate
     ;;
 "$logout")
     bspc quit
