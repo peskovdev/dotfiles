@@ -92,6 +92,7 @@ return require('packer').startup(function()
   use 'preservim/vim-markdown'
   -- Tabular
   use 'godlygeek/tabular'
+  use 'lervag/vimtex'
 
 
   -----------------------------------------------------------

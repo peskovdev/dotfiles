@@ -8,6 +8,7 @@ require('theme')
 require('plugins')
 require('toggle-term')
 require('markdown-preview')
+require('latex')
 require('telescope-config')
 require('silicon-config')
 

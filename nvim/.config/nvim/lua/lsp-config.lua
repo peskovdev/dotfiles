@@ -71,6 +71,7 @@ local servers = {
       },
     },
   },
+  texlab = {},
 }
 
 require("mason").setup({
