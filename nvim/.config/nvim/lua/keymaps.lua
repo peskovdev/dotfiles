@@ -13,7 +13,7 @@ map('n', 'd', '"+d', noremap)
 map('n', 'D', '"+D', noremap)
 map('v', 'd', '"+d', noremap)
 map('v', 'D', '"+D', noremap)
-map('n', '<C-x>', '"+x', noremap)
+map('n', 'x', '"+x', noremap)
 map('v', 'x', '"+x', noremap)
 -- paste from system clipboard
 vim.o.timeoutlen = 10000 -- timeout need for waiting for continue of p-commands
