@@ -177,6 +177,14 @@ return require('packer').startup(function()
     require'notifier'.setup()
   end, }
 
+  -- Indent blankline
+  use {"lukas-reineke/indent-blankline.nvim",
+  config = function()
+    require("ibl").setup {
+      scope = { enabled = false }
+    }
+  end, }
+
   -- Цветовые схемы
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use 'marko-cerovac/material.nvim'
