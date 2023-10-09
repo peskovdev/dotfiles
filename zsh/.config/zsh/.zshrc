@@ -108,6 +108,8 @@ plugins=(
 # Example aliases
 alias vi='nvim'
 alias x='startx ~/.config/xinit/xinitrc &> /dev/null'
+alias gdot="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+
 # dont forget execute: poetry config virtualenvs.in-project true
 alias v='source ./.venv/bin/activate'
 alias trans='trans :ru'

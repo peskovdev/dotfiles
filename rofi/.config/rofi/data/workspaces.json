@@ -1,7 +1,7 @@
 [
   {
     "session_name": "icpc-trainer",
-    "directory": "/home/inauris/projects/icpc-trainer",
+    "directory": "/home/inauris/projects/icpc-backend",
     "windows": [
       {
         "window_name": "app",
@@ -160,12 +160,20 @@
     "directory": "/home/inauris/projects/leetcode",
     "windows": [
       {
-        "window_name": "nvim",
-        "commands": ["rr"]
+        "window_name": "easy",
+        "commands": ["cd easy", "rr"]
       },
       {
-        "window_name": "term",
-        "commands": []
+        "window_name": "medium",
+        "commands": ["cd medium", "rr"]
+      },
+      {
+        "window_name": "hard",
+        "commands": ["cd hard", "rr"]
+      },
+      {
+        "window_name": "root",
+        "commands": ["rr"]
       }
     ]
   },
