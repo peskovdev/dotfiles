@@ -134,6 +134,11 @@ XF86Audio{Play,Stop,Prev,Next}
 XF86Audio{RaiseVolume,LowerVolume,Mute}
     changevolume {up,down,mute}
 
+#--------------------- Brightness ---------------------#
+
+XF86MonBrightness{Up,Down}
+    xbacklight {-inc 10,-dec 10}
+
 #--------------------- user setup ---------------------#
 
 # Hide polybar
