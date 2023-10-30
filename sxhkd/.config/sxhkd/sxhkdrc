@@ -132,7 +132,7 @@ XF86Audio{Play,Stop,Prev,Next}
     playerctl {play-pause,stop,previous,next}
 
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-    pamixer {-i 5,-d 5,-t}
+    changevolume {up,down,mute}
 
 #--------------------- user setup ---------------------#
 
@@ -141,8 +141,8 @@ ctrl + alt + i
     polybar-toggle
 
 # dunst history
-ctrl + grave
-    dunstctl history-pop
+ctrl + {space, shift + space, shift + period, grave}
+  dunstctl {close, close-all, context, history-pop}
 
 # Scratchpads
 super + s ; {k,c,p,t,b,f,m,l}
