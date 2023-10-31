@@ -17,7 +17,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = keyboard
 
     ### Geometry ###
 
@@ -406,9 +406,17 @@
 #    summary = "foobar"
 #    skip_display = true
 
-[history-ignore]
+[history-volume-ignore]
 #    # This notification will not be saved in history
     appname = changevolume
+    history_ignore = yes
+
+[history-brightness-ignore]
+    appname = changebrightness
+    history_ignore = yes
+
+[history-swd-ignore]
+    appname = swd
     history_ignore = yes
 
 #[skip-display]

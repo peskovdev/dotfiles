@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Use xbacklight to adjust laptop screen brightness
+# and send a notification displaying the current brightness level after.
+
+send_notification() {
+    brightness=$(printf "%.0f" "$(xbacklight -get)")
+    dunstify -a "changebrightness" -u low -h int:value:"$brightness" -i "brightness-$1" "Brightness: $brightness%" -t 2000 -r 9993
+}
+
+case $1 in
+up)
+    xbacklight +10
+    send_notification "$1"
+    ;;
+down)
+    xbacklight -10
+    send_notification "$1"
+    ;;
+esac
