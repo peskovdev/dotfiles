@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Send a notification displaying that the battery is charging or discharging
+# Pass 1 as an argument for charging, 0 for discharging
+# Example usage: chargingnotify 1
+
+# Create /etc/udev/rules.d/99-power.rules:
+# # Plug in battery
+# ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="1", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/inauris/.Xauthority" RUN+="/usr/bin/su inauris -c '/home/inauris/.local/bin/chargingnotify 1'"
+# # Remove charging cabel
+# ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="0", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/inauris/.Xauthority" RUN+="/usr/bin/su inauris -c '/home/inauris/.local/bin/chargingnotify 0'"
+
+# Check if argument is passed
+[ $# != 1 ] && printf '0 or 1 must be passed as an argument.\nUsage: %s 0|1\n' "$0" && exit
+
+export XAUTHORITY=/home/inauris/.Xauthority
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS=$(cat /tmp/dbus-addr-inauris.txt)
+
+BATTERY_CHARGING=$1
+BATTERY_LEVEL=$(acpi -b | grep "Battery 0" | grep -P -o '[0-9]+(?=%)')
+
+# Send notifications
+if [ "$BATTERY_CHARGING" -eq 1 ]; then
+    notify-send "Charging" "${BATTERY_LEVEL}% of battery charged." -u low -i "battery-charging-green" -t 5000 -r 9992
+elif [ "$BATTERY_CHARGING" -eq 0 ]; then
+    notify-send "Discharging" "${BATTERY_LEVEL}% of battery remaining." -u low -i "battery-green" -t 5000 -r 9992
+fi
