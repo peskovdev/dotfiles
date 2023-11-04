@@ -54,5 +54,7 @@ numlockx on &
 xsetroot -cursor_name left_ptr &
 feh --bg-fill ~/pictures/wallpapers/wallpaper &
 
-tdrop -am -h 60% -w 52% -y 25 -x 24% merkuro-calendar
-tdrop -am -h 60% -w 52% -y 25 -x 24% merkuro-calendar
+tdrop -am -h 1% -w 1% merkuro-calendar
+tdrop -am merkuro-calendar
+tdrop -am -n 1 -h 1% -w 1% alacritty -e btop
+tdrop -am -n 1 alacritty -e btop
