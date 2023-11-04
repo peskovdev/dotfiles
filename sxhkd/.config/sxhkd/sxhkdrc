@@ -152,7 +152,7 @@ ctrl + {space, shift + space, shift + period, grave}
 # Scratchpads
 super + s ; {k,c,p,t,b,f,m,l}
     tdrop -am {\
-    -h 60% -w 52% -y 25 -x 24% kalendar, \
+    -h 60% -w 52% -y 25 -x 24% merkuro-calendar, \
     -h 60% -w 52% -y 25 -x 24% thunderbird -calendar, \
     -h 60% -w 50% -y 25 -x 49% pavucontrol, \
     -h 60% -w 50% -y 25 -x 25% alacritty, \
