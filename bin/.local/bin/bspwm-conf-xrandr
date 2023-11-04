@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Что делает этот скрипт:
+# - Настраивает расположение внешних мониторов, если они подключены
+
+# Название мониторов узнать через "xrandr"
+laptop="eDP1"
+external="HDMI2"
+
+xrandr --output "$external" --auto --pos 0x0 --output "$laptop" --auto --pos 0x1080

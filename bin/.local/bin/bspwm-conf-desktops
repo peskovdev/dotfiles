@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Что делает этот скрипт:
+# - Перекидывает 1-10 рабочие столы на внешний (external) монитор
+# - Удаляет рабочий стол с названием "Desktop"
+
+laptop="eDP1"
+external="HDMI2"
+connected_monitors=$(bspc query -M | wc -l)
+
+if [ "$connected_monitors" -eq "2" ]; then	
+    for i in {1..10}; do bspc desktop "$i" -m "$external"; done
+else
+    bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+fi
+
+# По дефолту имя рабочих столов не цифры 1-10, а Desktop.
+# Чтоб его удалить, нужные прочие рабочие столы, поэтому удаляем после создания оных
+while [ "$(bspc query -D --names | grep -c 'Desktop')" -gt 0 ]; do
+   bspc desktop "Desktop" -r
+done
