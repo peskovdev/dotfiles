@@ -52,14 +52,14 @@ alt + {_,shift + } Tab
 
 # focus or send to the given desktop
 super + 1 ; {_,super + } {1-9,0}
-    bspc {desktop -f,node -d} '1{1-9,0}'
-super + 0 ; {_,super + } {1-9,0}
-    bspc {desktop -f,node -d} '2{1-9,0}'
-
+    bspc {desktop -f,node -d} '{1-9,10}'
 ctrl + 1 ; {_,ctrl + } {1-9,0}
-    bspc {desktop -f,node -d} '1{1-9,0}'
+    bspc {desktop -f,node -d} '{1-9,10}'
+
+super + 0 ; {_,super + } {1-9,0}
+    bspc {desktop -f,node -d} '0{1-9,0}'
 ctrl + 0 ; {_,ctrl + } {1-9,0}
-    bspc {desktop -f,node -d} '2{1-9,0}'
+    bspc {desktop -f,node -d} '0{1-9,0}'
     
 # rotate
 alt + r
