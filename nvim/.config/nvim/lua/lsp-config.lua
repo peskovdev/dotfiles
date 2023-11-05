@@ -101,3 +101,11 @@ require("mason-lspconfig").setup_handlers {
         }
     end,
 }
+
+-- Autoformats
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+    vim.lsp.buf.format({ timeout_ms = 200 })
+  end
+})
