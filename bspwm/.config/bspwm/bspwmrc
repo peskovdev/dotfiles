@@ -56,5 +56,5 @@ feh --bg-fill ~/pictures/wallpapers/wallpaper &
 
 tdrop -am -h 1% -w 1% merkuro-calendar
 tdrop -am merkuro-calendar
-tdrop -am -n 1 -h 1% -w 1% alacritty -e btop
+tdrop -am -n 1 -h 90% -w 70% -y 25 -x 15% alacritty -e btop
 tdrop -am -n 1 alacritty -e btop
