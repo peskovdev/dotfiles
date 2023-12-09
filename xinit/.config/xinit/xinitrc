@@ -1,3 +1,4 @@
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 cd ~
 dbus-daemon --session --fork --print-address 1 > /tmp/dbus-addr-inauris.txt
 exec dbus-launch bspwm
