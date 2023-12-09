@@ -5,6 +5,7 @@
 
 # Название мониторов узнать через "xrandr"
 laptop="eDP1"
-external="HDMI2"
+external="DP2"
 
-xrandr --output "$external" --auto --pos 0x0 --output "$laptop" --auto --pos 0x1080
+xrandr --output "$laptop" --primary --mode 1920x1080 --pos 320x1440 --rotate normal --output DP1 --off --output "$external" --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off
+# xrandr --output "$external" --auto --pos 0x0 --output "$laptop" --auto --pos 320x1440

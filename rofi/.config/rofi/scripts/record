@@ -46,7 +46,7 @@ start_recording=""
 chosen="$(echo -e "$options" | $rofi_command -p "$prompt" -dmenu -selected-row 2)"
 case $chosen in
 "$all")
-    start_recording+="ffmpeg -video_size 1920x2160 -framerate 30 -f x11grab -i :0.0+0,0 "
+    start_recording+="ffmpeg -video_size 2560x2520 -framerate 30 -f x11grab -i :0.0+0,0 "
     ;;
 "$select")
     screen_region=$(slop -f "%x %y %w %h")
@@ -61,9 +61,9 @@ case $chosen in
     start_recording+="ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0+$x,$y "
     ;;
 "$external")
-    x=$(xrandr | grep -w "HDMI2" | grep -oE '[+]{1}[0-9]*[+]{1}[0-9]*' | awk -F + '{print $2}')
-    y=$(xrandr | grep -w "HDMI2" | grep -oE '[+]{1}[0-9]*[+]{1}[0-9]*' | awk -F + '{print $3}')
-    start_recording+="ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0+$x,$y "
+    x=$(xrandr | grep -w "DP2" | grep -oE '[+]{1}[0-9]*[+]{1}[0-9]*' | awk -F + '{print $2}')
+    y=$(xrandr | grep -w "DP2" | grep -oE '[+]{1}[0-9]*[+]{1}[0-9]*' | awk -F + '{print $3}')
+    start_recording+="ffmpeg -video_size 2560x1440 -framerate 25 -f x11grab -i :0.0+$x,$y "
     ;;
 "$stop")
     pkill -P "$(pgrep record | head -n 1)"
