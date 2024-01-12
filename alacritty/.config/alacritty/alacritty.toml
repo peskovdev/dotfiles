@@ -1,0 +1,30 @@
+import = ["/home/inauris/.config/alacritty/themes/github_light_default.toml"]
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "Ubuntu Mono"
+style = "bold"
+
+[font.bold_italic]
+family = "Ubuntu Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Ubuntu Mono"
+style = "Italic"
+
+[font.normal]
+family = "Ubuntu Mono"
+style = "Regular"
+
+[window]
+opacity = 0.9
+
+[window.padding]
+x = 7
+y = 7
