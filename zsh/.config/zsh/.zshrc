@@ -118,7 +118,7 @@ alias transe='trans :en'
 alias hg='history | grep'
 alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
-alias yaya='yay -Syu --noconfirm'
+alias parua='paru -Suy --noconfirm'
 
 # Download only audio
 alias ydm='yt-dlp --audio-quality 0 --output "%(title)s.%(ext)s" --extract-audio --audio-format mp3'

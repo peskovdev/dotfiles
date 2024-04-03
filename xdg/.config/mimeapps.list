@@ -24,6 +24,7 @@ video/mpeg=mpv.desktop
 inode/directory=alacritty-ranger.desktop
 application/zip=alacritty-ranger-select.desktop
 application/x-tar=alacritty-ranger-select.desktop
+x-scheme-handler/postman=Postman.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-MH9KU1.desktop;
