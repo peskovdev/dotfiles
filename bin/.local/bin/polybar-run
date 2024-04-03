@@ -7,7 +7,7 @@ while pgrep -u $UID -x polybar >/dev/null; do
 done
 
 laptop="eDP1"
-external="DP2"
+external="DP1"
 
 connected_monitors=$(bspc query -M | wc -l)
 polybar_config="$XDG_CONFIG_HOME/polybar/config.ini"
