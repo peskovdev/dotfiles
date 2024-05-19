@@ -25,8 +25,8 @@ function _pyrun_toggle()
     float_opts = {
       border = "double",
       col = 85,
-      width = 90,
-      height = 30,
+      width = 150,
+      height = 50,
     },
     close_on_exit = false,
     count = 9,
