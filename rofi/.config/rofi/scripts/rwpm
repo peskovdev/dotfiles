@@ -11,7 +11,7 @@ options=(
     "select random from saved"
     "select last saved"
     "select previous"
-    "save current wallpaper"
+    "keep current wallpaper"
   )
 
 chosen="$(printf '%s\n' "${options[@]}" | $rofi_command -p "rwpm" -dmenu -selected-row 1)"
@@ -141,7 +141,7 @@ case $chosen in
     ln -sf "$previous" "$wallpaper"
     feh --bg-fill "$wallpaper" >/dev/null
     ;;
-"save current wallpaper")
+"keep current wallpaper")
     # Получаем путь текущего изображения
     current_wallpaper="$(readlink -f "$wallpaper")"
 
