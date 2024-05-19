@@ -215,7 +215,7 @@
     max_icon_size = 80
 
     # Paths to default icons.
-    icon_path = /home/peskovdev/.local/share/icons:/usr/share/icons/gnome/16x16/status/
+    icon_path = /home/inauris/.local/share/icons:/usr/share/icons/gnome/16x16/status/
 
     ### History ###
 

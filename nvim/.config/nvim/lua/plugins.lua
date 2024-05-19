@@ -79,9 +79,14 @@ return require('packer').startup(function()
   -- Закрывает автоматом html и xml тэги + rename.
   use 'windwp/nvim-ts-autotag'
   -- Подсвечивает #ffffff
-  use {"norcalli/nvim-colorizer.lua",
-    config = function() require("colorizer").setup() end
-  }
+  use {"norcalli/nvim-colorizer.lua", config = function()
+      require("colorizer").setup(
+        {
+          filetypes = {"*"},
+          default_options = {names = false}
+        }
+      )
+  end}
 
   -- Превью файлов .md. Install without yarn or npm
   use({
