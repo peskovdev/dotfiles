@@ -5,7 +5,7 @@
 # - Удаляет рабочий стол с названием "Desktop"
 
 laptop="eDP1"
-external="DP1"
+external="DP2"
 connected_monitors=$(bspc query -M | wc -l)
 
 if [ "$connected_monitors" -eq "2" ]; then
