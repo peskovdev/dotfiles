@@ -107,6 +107,7 @@ export LC_TIME=C.UTF-8
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias fzf="fzf --height=95% --layout=reverse --ansi --preview='bat --color=always {}'"
 alias vi='nvim'
 alias x='startx ~/.config/xinit/xinitrc &> /dev/null'
 alias gdot="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
