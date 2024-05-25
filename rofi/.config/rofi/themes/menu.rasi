@@ -9,6 +9,7 @@ window {
     width:                  537px;
     border-color:           @background-light;
     location:               east;
+    border-radius:          15px;
     border:                 1;
     x-offset:               -20px;
     y-offset:               0;
