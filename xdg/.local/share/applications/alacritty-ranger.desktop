@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=ranger-nvim
+Name=ranger-alacritty
 Comment=Launches the ranger file manager
 Icon=utilities-terminal
 Terminal=false
