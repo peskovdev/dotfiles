@@ -1,4 +1,5 @@
 local map = vim.api.nvim_set_keymap
+local cmd = vim.cmd             -- execute Vim commands
 local noremap = {noremap = true}
 local default_opts = {noremap = true, silent = true}
 
@@ -8,6 +9,7 @@ map('n', 'y', '"+y', noremap)
 map('n', 'Y', '"+Y', noremap)
 map('v', 'y', '"+y', noremap)
 map('v', 'Y', '"+Y', noremap)
+
 -- cut
 map('n', 'd', '"+d', noremap)
 map('n', 'D', '"+D', noremap)
@@ -71,6 +73,7 @@ map('v', '>', '>gv', default_opts)
 
 -- nvim-tree
 map('n', '<leader>df', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', default_opts)
+map('n', '<leader>dl', ':NvimTreeRefresh<CR>:NvimTreeFindFile<CR>', default_opts)
 
 -- Neovim motions on speed! 
 map('n', 'f', '<cmd>:HopWord<CR>', default_opts)
@@ -96,6 +99,12 @@ map('n', '<F5>', ':65vsplit | term python %<CR>i', default_opts)
 
 -- config reloading
 map('n', '<c-w>r', ':source $MYVIMRC<CR>', noremap)
+
+
+cmd([[
+:set langmap=фисвуапршолдьтщзйкыегмцчняжФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;abcdefghijklmnopqrstuvwxyz;ABCDEFGHIJKLMNOPQRSTUVWXYZ:
+]]);
+
 
 -- require("duck").hatch("", 2)
 vim.keymap.set('n', '<leader>dd', function() require("duck").hatch("", 2) end, {})

@@ -5,10 +5,10 @@ local cmd = vim.cmd             -- execute Vim commands
 
 -- markdown
 map('n', '<c-m>', ':MarkdownPreview<CR>', noremap)
-cmd([[
-function OpenMarkdownPreview (url)
-    execute "silent ! firefox --new-window " . a:url
-  endfunction
-]])
--- g.mkdp_browser = 'qutebrowser'
-g.mkdp_browserfunc = 'OpenMarkdownPreview'
+-- cmd([[
+-- function OpenMarkdownPreview (url)
+--     execute "silent ! firefox --new-window " . a:url
+--   endfunction
+-- ]])
+-- -- g.mkdp_browser = 'qutebrowser'
+-- g.mkdp_browserfunc = 'OpenMarkdownPreview'

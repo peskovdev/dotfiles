@@ -36,6 +36,15 @@ require('github-theme').setup({
   },
 })
 
+-- g.material_style = "lighter"
+-- require('material').setup({
+--   disable = {
+--         background = false, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
+--     },
+-- })
+-- cmd.colorscheme 'material'
+
+
 cmd.colorscheme 'catppuccin'
 -- cmd.colorscheme 'github_light_tritanopia'
 
@@ -58,11 +67,12 @@ cmd.colorscheme 'catppuccin'
 
 -- material.nvim
 -- g.material_style = "palenight"
--- g.material_style = "lighter"
 -- g.material_style = "oceanic"
+
+-- g.material_style = "lighter"
 -- require('material').setup({
 --   disable = {
---         background = true, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
+--         background = false, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
 --     },
 -- })
 -- cmd.colorscheme 'material'
