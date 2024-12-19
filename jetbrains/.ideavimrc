@@ -1,0 +1,120 @@
+""" Map leader to space ---------------------
+let mapleader = ","
+let localleader=","
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set commentary 
+set NERDTree
+set textobj-entire
+set ReplaceWithRegister
+
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+" map <leader>f <Plug>(easymotion-s)
+" map <leader>e <Plug>(easymotion-f)
+
+" map <leader>d <Action>(Debug)
+" map <leader>r <Action>(RenameElement)
+" map <leader>c <Action>(Stop)
+" map <leader>z <Action>(ToggleDistractionFreeMode)
+"
+" map <leader>s <Action>(SelectInProjectView)
+" map <leader>a <Action>(Annotate)
+" map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+" map <S-Space> <Action>(GotoNextError)
+"
+" map <leader>b <Action>(ToggleLineBreakpoint)
+" map <leader>o <Action>(FileStructurePopup)
+map <leader>ff <Action>(SearchEverywhere)
+map <leader>fl <Action>(FindInPath)
+map <space>rn <Action>(RenameElement)
+
+
+""" My vim config
+set ignorecase
+set smartcase
+
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" System clipboard
+" Yank to system
+nnoremap y "+y
+nnoremap Y "+Y
+vnoremap y "+y
+vnoremap Y "+Y
+" Cut
+nnoremap d "+d
+nnoremap D "+D
+vnoremap d "+d
+vnoremap D "+D
+nnoremap x "+x
+vnoremap x "+x
+" Paste from system clipboard
+set timeoutlen=10000 " Timeout needed for waiting for continue of p-commands
+nnoremap p <Nop>
+nnoremap pi <Nop>
+nnoremap pp "+p
+nnoremap pP "+P
+nnoremap piw ciw<C-r>+<Esc>
+nnoremap piW ciW<C-r>+<Esc>
+nnoremap pi( ci(<C-r>+<Esc>
+nnoremap pi) ci)<C-r>+<Esc>
+nnoremap pi[ ci[<C-r>+<Esc>
+nnoremap pi] ci]<C-r>+<Esc>
+nnoremap pi{ ci{<C-r>+<Esc>
+nnoremap pi} ci}<C-r>+<Esc>
+nnoremap pi< ci`<C-r>+<Esc>
+nnoremap pi> ci`<C-r>+<Esc>
+nnoremap pi` ci`<C-r>+<Esc>
+nnoremap pi" ci"<C-r>+<Esc>
+nnoremap pi' ci'<C-r>+<Esc>
+vnoremap p "+p
+vnoremap P "+P
+
+" Paste from local clipboard
+nnoremap <leader>p p
+vnoremap <leader>p p
+nnoremap <leader>P P
+vnoremap <leader>P P
+
+nnoremap <leader>dD <esc>gg"+dGi
+nnoremap dD <esc>ggdGi
+
+" Clear last search highlight
+nnoremap ,<space> :nohl<CR>
+
+" Deprecate skip selection after indenting
+vnoremap < <gv
+vnoremap > >gv
+
+nnoremap gn :bnext<CR>
+nnoremap gp :bprev<CR>
+nnoremap gw :bdelete<CR>
+
+nnoremap <c-w>s <c-w>x
+nnoremap <c-w>x <c-w>s
+
+nnoremap <leader>df :NERDTreeRefreshRoot<CR>:NERDTreeToggle<CR>
+nnoremap <leader>dl :NERDTreeFind<CR>
