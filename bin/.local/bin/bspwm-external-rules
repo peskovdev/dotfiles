@@ -48,7 +48,7 @@ flameshot)
     echo "state=floating"
     ;;
 TelegramDesktop)
-    echo "desktop=7"
+    echo "desktop=4"
     ;;
 superProductivity)
     echo "desktop=17"

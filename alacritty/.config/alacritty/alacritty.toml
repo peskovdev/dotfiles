@@ -1,5 +1,3 @@
-import = ["/home/inauris/.config/alacritty/themes/github_light_default.toml"]
-
 [env]
 WINIT_X11_SCALE_FACTOR = "1"
 
@@ -28,3 +26,6 @@ opacity = 0.9
 [window.padding]
 x = 7
 y = 7
+
+[general]
+import = ["/home/inauris/.config/alacritty/themes/github_light_default.toml"]

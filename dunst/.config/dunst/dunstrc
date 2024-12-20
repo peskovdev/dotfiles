@@ -32,7 +32,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "400x300-25+50"
+    # geometry = "400x100-25+50"
 
     # dynamic width from 0 to 300
     # width = (0, 300)
@@ -40,7 +40,7 @@
     width = 400
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    # height = 400
 
     # Position the notification in the top right corner
     origin = top-right

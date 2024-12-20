@@ -49,6 +49,7 @@ function _shrun_toggle()
 end
 function _gorun_toggle()
   Terminal:new({
+    -- cmd = "go run .",
     cmd = "go run "..vim.api.nvim_buf_get_name(0),
     -- direction = "horizontal",
     direction = "float",

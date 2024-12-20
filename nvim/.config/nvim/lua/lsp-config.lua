@@ -53,7 +53,7 @@ local servers = {
     }
   },
   gopls = {
-    cmd = { "ya", "tool", "gopls" },
+    -- cmd = { "ya", "tool", "gopls" },
     -- root_dir = function(fname)
     --  return lspconfig_util.root_pattern("ya.make", "go.mod", "go.work", ".git",
     --   "authorize.go")(fname)
@@ -96,7 +96,7 @@ local servers = {
   texlab = {},
 }
 
-vim.g.go_gopls_local = 'a.yandex-team.ru'
+-- vim.g.go_gopls_local = 'a.yandex-team.ru'
 require("mason").setup({
   ui = {
     icons = {
