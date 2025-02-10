@@ -5,7 +5,8 @@
 
 # Название мониторов узнать через "xrandr"
 laptop="eDP1"
-external="DP2"
+external=$(get_external_monitor)
 
 # xrandr --output "$external" --auto --pos 0x0 --output "$laptop" --auto --pos 320x1440
-xrandr --output "$external" --auto --pos 0x0 --output "$laptop" --auto --pos 960x2160 # 4k
+# xrandr --output "$external" --auto --pos 0x0 --output "$laptop" --auto --pos 960x2160 # 4k
+xrandr --output "$external" --mode 3840x2160 --pos 0x0 --output "$laptop" --auto --pos 960x2160 # 4k

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# internal monitor - for excluding
+laptop="eDP1"
+
+# Get the external monitor (exclude the laptop display)
+external=$(xrandr --query | grep " connected" | grep -v "eDP" | awk '{print $1}' | head -n 1)
+
+echo "$external"
